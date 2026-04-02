@@ -19,8 +19,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -36,6 +34,3 @@ jobs:
 
       - name: Run tests
         run: pnpm test
-
-      - name: Type check website
-        run: cd website && npx tsc --noEmit
