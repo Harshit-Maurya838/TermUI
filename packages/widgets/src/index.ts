@@ -12,6 +12,8 @@ export { Text } from './display/Text.js';
 export type { TextProps } from './display/Text.js';
 export { LogView } from './display/LogView.js';
 export type { LogViewOptions } from './display/LogView.js';
+export { Tree } from './display/Tree.js';
+export type { TreeNode, TreeOptions } from './display/Tree.js';
 
 // ── Input Widgets ─────────────────────────────────────
 export { List } from './input/List.js';
