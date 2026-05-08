@@ -25,6 +25,8 @@ export type { ListItem } from './input/List.js';
 export { TextInput } from './input/TextInput.js';
 export { VirtualList } from './input/VirtualList.js';
 export type { VirtualListOptions } from './input/VirtualList.js';
+export { CommandPalette } from './input/CommandPalette.js';
+export type { Command, CommandPaletteOptions } from './input/CommandPalette.js';
 
 // ── Data Widgets ──────────────────────────────────────
 export { Table } from './data/Table.js';
