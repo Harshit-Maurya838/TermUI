@@ -43,3 +43,6 @@ export type {
 } from './hooks.js';
 export { useBattery } from './hooks/useBattery.js';
 export type { BatteryData, UseBatteryResult } from './hooks/useBattery.js';
+
+export { usePolling } from './hooks/usePolling.js';
+export type { UsePollingResult } from './hooks/usePolling.js';
