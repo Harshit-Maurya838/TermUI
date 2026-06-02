@@ -41,3 +41,5 @@ export type {
     UseFetchOptions,
     UseFetchResult,
 } from './hooks.js';
+export { useBattery } from './hooks/useBattery.js';
+export type { BatteryData, UseBatteryResult } from './hooks/useBattery.js';
