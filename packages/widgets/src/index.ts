@@ -42,6 +42,9 @@ export type { Command, CommandPaletteOptions } from './input/CommandPalette.js';
 export { Button } from './input/Button.js';
 export type { ButtonOptions, ButtonVariant } from './input/Button.js';
 
+export { RangeInput } from './input/RangeInput.js';
+export type { RangeInputOptions } from './input/RangeInput.js';
+
 // ── Data Widgets ──────────────────────────────────────
 export { Table } from './data/Table.js';
 export type { TableColumn, TableRow, TableOptions, TableProps } from './data/Table.js';
