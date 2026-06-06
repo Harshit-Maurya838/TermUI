@@ -111,11 +111,11 @@ import { Box, Text } from '@termuijs/widgets';
 function Counter() {
     const [count, setCount] = useState(0);
 
-    useKeymap({
-        '+': () => setCount(c => c + 1),
-        'ctrl+c': () => process.exit(0),
-        'q': () => process.exit(0)
-    });
+    useKeymap([
+        { key: '+', action: () => setCount(c => c + 1) },
+        { key: 'c', ctrl: true, action: () => process.exit(0) },
+        { key: 'q', action: () => process.exit(0) },
+    ]);
 
     return (
         <Box border="round" padding={1}>
