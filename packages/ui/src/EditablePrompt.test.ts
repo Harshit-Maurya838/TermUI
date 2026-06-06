@@ -31,7 +31,7 @@ describe('EditablePrompt', () => {
             prompt.updateRect({ x: 0, y: 0, width: 40, height: 10 });
             prompt.render(screen);
 
-            const row0 = screen.back[0].map((c: any) => c.char).join('').trim();
+            const row0 = screen.back[0].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row0).toContain('Configure options');
         });
     });
@@ -88,7 +88,7 @@ describe('EditablePrompt', () => {
             prompt.updateRect({ x: 0, y: 0, width: 50, height: 10 });
             prompt.render(screen);
 
-            const row0 = screen.back[0].map((c: any) => c.char).join('').trim();
+            const row0 = screen.back[0].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row0).toContain('[x]');
         });
     });
@@ -109,7 +109,7 @@ describe('EditablePrompt', () => {
             prompt.updateRect({ x: 0, y: 0, width: 50, height: 10 });
             prompt.render(screen);
 
-            const row1 = screen.back[1].map((c: any) => c.char).join('').trim();
+            const row1 = screen.back[1].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row1).toContain('_'); // Editing cursor
         });
 
@@ -200,7 +200,7 @@ describe('EditablePrompt', () => {
             prompt.updateRect({ x: 0, y: 0, width: 50, height: 10 });
             prompt.render(screen);
 
-            const row1 = screen.back[1].map((c: any) => c.char).join('').trim();
+            const row1 = screen.back[1].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row1).toContain('Output path');
             expect(row1).toContain('./dist');
         });
@@ -217,14 +217,14 @@ describe('EditablePrompt', () => {
 
             // At index 0
             prompt.render(screen);
-            let row0 = screen.back[0].map((c: any) => c.char).join('').trim();
+            let row0 = screen.back[0].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row0).toContain('❯');
 
             // Navigate down
             prompt.handleKey({ key: 'down' } as Partial<KeyEvent> as KeyEvent);
             prompt.render(screen);
-            row0 = screen.back[0].map((c: any) => c.char).join('').trim();
-            const row1 = screen.back[1].map((c: any) => c.char).join('').trim();
+            row0 = screen.back[0].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
+            const row1 = screen.back[1].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row0).not.toContain('❯');
             expect(row1).toContain('❯');
         });
@@ -244,7 +244,7 @@ describe('EditablePrompt', () => {
             prompt.updateRect({ x: 0, y: 0, width: 50, height: 10 });
             prompt.render(screen);
 
-            const row1 = screen.back[1].map((c: any) => c.char).join('').trim();
+            const row1 = screen.back[1].map((c: any) => c.char).join('').trim(); // Cell type required for screen back buffer rendering
             expect(row1).toContain('❯');
         });
 
