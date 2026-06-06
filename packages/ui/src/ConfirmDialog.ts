@@ -1,6 +1,6 @@
 // ConfirmDialog — yes/no prompt overlay
 import { Widget } from '@termuijs/widgets';
-import { type Style, type Screen, mergeStyles, defaultStyle, styleToCellAttrs, getBorderChars } from '@termuijs/core';
+import { type Style, type Screen, type KeyEvent, mergeStyles, defaultStyle, styleToCellAttrs, getBorderChars } from '@termuijs/core';
 
 export interface ConfirmDialogOptions {
     message: string;
@@ -42,6 +42,14 @@ export class ConfirmDialog extends Widget {
         (this._selected === 'confirm' ? this._onConfirm : this._onCancel)?.();
         this._visible = false;
         this.markDirty();
+    }
+
+    handleKey(event: KeyEvent): void {
+        if (!this._visible) return;
+        if (event.key === 'escape') {
+            this.selectCancel();
+            this.confirm();
+        }
     }
 
     protected _renderSelf(screen: Screen): void {
