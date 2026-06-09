@@ -206,3 +206,5 @@ export type { BreadcrumbItem, BreadcrumbOptions } from './Breadcrumb.js';
 export { Disclosure } from './Disclosure.js';
 export type { DisclosureOptions } from './Disclosure.js';
 
+export { Listbar } from './Listbar.js';
+export type { ListbarOptions, ListbarItem } from './Listbar.js';
